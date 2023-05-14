@@ -63,4 +63,11 @@
   #withdraw,
   #newBalanceWithdraw {
     display: none;
-}  
+} 
+
+#inputAmount,
+  #withdrawAmount {
+    width: 60%;
+    margin-right: 10px;
+    font-size: 16px;
+}
