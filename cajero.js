@@ -25,3 +25,22 @@ function login() {
       alert("Invalid password. Please try again.");
     }
 }
+
+function logout() {
+    document.getElementById("login").style.display = "inline-block";
+    document.getElementById("logout").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("balance").style.display = "none";
+    document.getElementById("amount").style.display = "none";
+    document.getElementById("withdraw").style.display = "none";
+    currentAccount = null;
+    currentBalance = null;
+}
+
+function checkBalance() {
+    document.getElementById("balance").innerHTML =
+    "Current balance: $" + currentBalance;
+    document.getElementById("balance").style.display = "block";
+    document.getElementById("amount").style.display = "none";
+    document.getElementById("withdraw").style.display = "none";
+}
