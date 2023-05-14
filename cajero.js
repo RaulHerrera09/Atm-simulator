@@ -63,3 +63,26 @@ function deposit() {
     alert("Invalid amount. Please enter a value between 1 and 990.");
     }
 }
+
+function withdrawAmount() {
+    document.getElementById("balance").style.display = "none";
+    document.getElementById("amount").style.display = "none";
+    document.getElementById("withdraw").style.display = "block";
+    document.getElementById("newBalanceWithdraw").style.display = "none";
+    }
+    
+    
+    function withdraw() {
+    var amount = parseInt(document.getElementById("withdrawAmount").value);
+    if (amount > 0 && amount <= currentBalance - 10) {
+    currentBalance -= amount;
+    document.getElementById("newBalanceWithdraw").innerHTML =
+    "Amount withdrawn: $" + amount + "<br>New balance: $" + currentBalance;
+    document.getElementById("newBalanceWithdraw").style.display = "block";
+    } else {
+    alert(
+    "Invalid amount. Please enter a value between 1 and " +
+    (currentBalance - 10)
+    );
+    }
+}
