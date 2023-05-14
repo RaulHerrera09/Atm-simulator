@@ -44,3 +44,22 @@ function checkBalance() {
     document.getElementById("amount").style.display = "none";
     document.getElementById("withdraw").style.display = "none";
 }
+
+function enterAmount() {
+    document.getElementById("balance").style.display = "none";
+    document.getElementById("withdraw").style.display = "none";
+    document.getElementById("amount").style.display = "block";
+    document.getElementById("newBalance").style.display = "none";
+}
+
+function deposit() {
+    var amount = parseInt(document.getElementById("inputAmount").value);
+    if (amount > 0 && amount <= 990) {
+    currentBalance += amount;
+    document.getElementById("newBalance").innerHTML =
+    "New balance: $" + currentBalance;
+    document.getElementById("newBalance").style.display = "block";
+    } else {
+    alert("Invalid amount. Please enter a value between 1 and 990.");
+    }
+}
