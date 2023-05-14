@@ -86,3 +86,6 @@ function withdrawAmount() {
     );
     }
 }
+
+document.getElementById("logout").style.display = "none";
+document.getElementById("options").style.display = "none";
