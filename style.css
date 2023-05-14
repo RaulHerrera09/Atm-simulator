@@ -89,3 +89,12 @@
     margin-top: 30px;
     font-size: 20px;
 }
+
+#newBalance,
+  #newBalanceWithdraw {
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: #333;
+}
